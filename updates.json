@@ -1,0 +1,25 @@
+[
+    {
+      "id": "testbuild-v0.0.1",
+      "status": 3,
+      "version_name": "tb-0.0.1",
+      "date_released": "04/06/2025",
+      "changelog": "- Added Menu \n- Removed (scary suprises)..."
+    },
+
+    {
+        "id": "testbuild-v0.0.2",
+        "status": 3,
+        "version_name": "tb-0.0.1.1",
+        "date_released": "04/06/2025",
+        "changelog": "- Fixed Bugs that were found in mod launcher \n- Fixed Menu Tweaks (Bug Found) (where user wanted to switch menu, it would be buggy and effects would be everywhere) \n- Particle Option is now renamed to (Visual Effects) \n- Removed (scary suprises)..."
+    },
+
+    {
+        "id": "testbuild-v0.0.3",
+        "status": 3,
+        "version_name": "tb-0.0.2",
+        "date_released": "04/07/2025",
+        "changelog": "- Fixed Minor Bugs that were detected in the mod launcher \n- Users can now safely when they feel like clearing cache or reset the progress, the system is now patch and more betteer! §e(Bug Report!) §r(where if clicked reset data or clear cache, it reset everything they had in the mod launcher.) \n- Removed §4(scary suprises)..."
+    }
+]

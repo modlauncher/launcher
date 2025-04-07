@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Mod Launcher</title>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'>
+    <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0' />
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet'>
+</head>
+<body>
+    <div class='launcher'>
+        <aside class='sidebar'>
+            <div class='sidebar-item active' id='home-btn-nav'>
+                <span class='material-symbols-outlined'>home</span>
+                <span class='item-text'>Home</span>
+            </div>
+            <div class='sidebar-item' id='extensions-btn-nav'>
+                <span class='material-symbols-outlined'>computer</span>
+                <span class='item-text'>Extensions</span>
+            </div>
+            <div class='sidebar-item' id='updates-btn-nav'>
+                <span class='material-symbols-outlined'>browser_updated</span>
+                <span class='item-text'>Updates</span>
+            </div>
+            <div class='sidebar-item' id='community-btn-nav'>
+                <span class='material-symbols-outlined'>public</span>
+                <span class='item-text'>Community</span>
+            </div>
+            <div class='sidebar-bottom'>
+                <div class='particles-toggle'>
+                    Visual Effects  <span id='particles-status'>ON</span>
+                </div>
+                <div class='sidebar-item' id='my-extensions-btn-nav'>
+                    <span class='material-symbols-outlined'>extension</span>
+                    <span class='item-text'>My Extensions</span>
+                </div>
+                <div class='sidebar-item' id='settings-btn-nav'>
+                    <span class='material-symbols-outlined'>settings</span>
+                    <span class='item-text'>Settings</span>
+                </div>
+            </div>
+        </aside>
+        <main class='content'>
+            <div class='particles'></div>
+            <div id='home-screen' class='active'>
+                <div class='content-header'>
+                    <img src='assets/launcher-minecraft_title-launcher.png' alt='Mod Launcher Title' class='launcher-title'>
+                </div>
+                <div class='content-body'>
+                    <div class='minecraft-buttons-container'>
+                        <button class='minecraft-btn' id='discord-btn'>
+                            <img src='assets/icon-sm_discord.png' alt='Discord Icon'> Discord
+                        </button>
+                        <button class='minecraft-btn' id='youtube-btn'>
+                            <img src='assets/icon-sm_youtube.png' alt='YouTube Icon'> YouTube
+                        </button>
+                        <button class='minecraft-btn' id='github-btn'>
+                            <img src='assets/icon-sm_github.png' alt='GitHub Icon'> GitHub
+                        </button>
+                        <button class='minecraft-btn' id='download-btn'>
+                            <span class='material-symbols-outlined' style='font-size: 1.2em; vertical-align: middle;'>download</span> Download
+                        </button>
+                    </div>
+                    <div id='download-ui' class='download-ui'>
+                        <h3>Download Mod Launcher</h3>
+                        <p>Click the button below to start the download.</p>
+                        <button id='start-download-btn' class='green-button'>Click to Download</button>
+                        <p class='download-path'>Downloading: <code>file:///C:/Users/user/Downloads/Mod%20Launcher.zip</code></p>
+                    </div>
+                    <p class='launcher-description'>Where you can download, and upload mods/addons! An unofficial Minecraft Mod Launcher!</p>
+                    <p class='launcher-disclaimer'>⚠️ Minecraft Mod Launcher does NOT pirate Minecraft; you need to own a legal copy ⚠️</p>
+                </div>
+            </div>
+            <div id='settings-screen' class='settings-screen'>
+                <div class='settings-header'>
+                    <h1>Settings</h1>
+                    <p class='settings-description'>Configure launcher behavior, experimental features, and accessibility options to tailor your experience.</p>
+                </div>
+                <div class='settings-categories'>
+                    <ul>
+                        <li>EXPERIMENTAL SETTINGS</li>
+                        <li>LAUNCHER SETTINGS</li>
+                        <li>LAUNCHER ACCESSIBILITY SETTINGS</li>
+                    </ul>
+                </div>
+                <div class='settings-buttons'>
+                    <button class='minecraft-btn settings-btn reset-btn'>Reset Data</button>
+                    <button class='minecraft-btn settings-btn clear-btn'>Clear Cache</button>
+                </div>
+            </div>
+            <div id='updates-screen' class='updates-screen'>
+                <div class='updates-header'>
+                    <h1>Updates</h1>
+                    <p class='updates-description'>View the version history, check for the latest releases, beta previews, and development builds.</p>
+                </div>
+                <div class='updates-legend'>
+                    <div class='legend-item'>
+                        <span class='legend-square status-0'></span>
+                        <span class='legend-text bold status-0'>Current Version</span>
+                    </div>
+                    <div class='legend-item'>
+                        <span class='legend-square status-1'></span>
+                        <span class='legend-text bold status-1'>Beta/Preview Version</span>
+                    </div>
+                     <div class='legend-item'>
+                        <span class='legend-square status-2'></span>
+                        <span class='legend-text bold status-2'>Outdated Version</span>
+                    </div>
+                     <div class='legend-item'>
+                        <span class='legend-square status-3'></span>
+                        <span class='legend-text status-3'>Development Version</span>
+                    </div>
+                </div>
+                <div id='updates-list-container'>
+                </div>
+        </div>
+        </main>
+        <footer class='bottom-banner'>
+            <div class='footer-content'>
+                <p class='footer-copyright'>ToxicStudios 2025 © Not associated or approved by Mojang</p>
+                <div class='scroll-down-arrow'>
+                    <span class='material-symbols-outlined'>expand_more</span>
+                </div>
+            </div>
+        </footer>
+        <div class='footer-popup'>
+            <div class='footer-popup-content'>
+                <div class='footer-popup-buttons'>
+                    <button class='footer-popup-button'>
+                        Credits
+                    </button>
+                    <button class='footer-popup-button'>Source</button>
+                    <button class='footer-popup-button' id='footer-updates-btn'>What's New?</button>
+                </div>
+                <img src='assets/icon-credits_toxic5018.png' alt='ToxicStudios Logo' class='footer-creator-icon'>
+                <p class='footer-creator-name'>ToxicStudios</p>
+                <p class='footer-creator-role'>The Creator</p>
+            </div>
+        </div>
+
+        <div id='custom-confirmation-popup' class='custom-confirmation-popup'>
+            <div class='custom-confirmation-content'>
+                <p class='custom-confirmation-message'>Are you sure?</p>
+                <div class='custom-checkbox-container'>
+                    <input type='checkbox' id='dont-show-again' class='hidden-checkbox'>
+                    <label for='dont-show-again' class='custom-checkbox-label'>
+                        <span class='custom-checkbox'></span>
+                        Don't show this again
+                    </label>
+                </div>
+            </div>
+            <div class='custom-confirmation-buttons'>
+                <button id='custom-cancel-button'>Cancel</button>
+                <button id='custom-confirm-button'>Confirm</button>
+            </div>
+        </div>
+
+        <div id='achievement-popup' class='achievement-popup hide'>
+            <img id='achievement-image' src='' alt='Achievement'>
+        </div>
+
+        <div id="changelog-popup" class="popup-base">
+            <div class="changelog-header">
+                <h2 class="changelog-title"></h2>
+                <div class="changelog-controls">
+                    <span id="changelog-expand-btn" class="material-symbols-outlined changelog-control-btn" style="font-size: 24px; cursor: pointer;">expand</span>
+                    <span class="material-symbols-outlined changelog-close-btn changelog-control-btn" style="font-size: 24px; cursor: pointer;">close</span>
+                </div>
+            </div>
+            <div class="changelog-content">
+                <h3 id="changelog-version-name" class="changelog-version-name"></h3>
+                <p id="changelog-date-released" class="changelog-status-date">
+                    Status: <strong id="changelog-version-status"></strong>
+                </p>
+                <p id="changelog-text" class="changelog-text"></p>
+            </div>
+        </div>
+
+        <div id='overlay' class='overlay'></div>
+
+        <audio id='minecraft-click-sound' src='assets/sounds/sound-click_stereo.ogg' preload='auto'></audio>
+        <audio id='sidebar-click-sound' src='assets/sounds/sound-release.ogg' preload='auto'></audio>
+        <audio id='drawer-close-sound' src='assets/sounds/sound-drawer_close.ogg' preload='auto'></audio>
+        <audio id='drawer-open-sound' src='assets/sounds/sound-drawer_open.ogg' preload='auto'></audio>
+        <audio id='toast-sound' src='assets/sounds/sound-toast.ogg' preload='auto'></audio>
+
+    </div>
+
+    <div class="changelog-window">
+        <div class="changelog-header">
+          <span class="changelog-title">Changelog</span>
+          <span class="changelog-close">✕</span>
+        </div>
+        <div class="changelog-content"></div>
+      </div>
+
+    <script src='script.js'></script>
+</body>
+</html>
